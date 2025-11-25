@@ -1,0 +1,62 @@
+name: Deploy to DigitalOcean Droplet (dev mode)
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js app
+        run: npm run build
+        # No env vars needed for dev → Clerk will just show "Sign In" button that does nothing
+
+      - name: Deploy to Droplet via SSH
+        env:
+          DROPLET_SSH_KEY_PRIVATE: ${{ secrets.DROPLET_SSH_KEY_PRIVATE }}
+          DROPLET_HOST: ${{ secrets.DROPLET_HOST }}
+          DROPLET_USER: ${{ secrets.DROPLET_USER }}
+        run: |
+          # Install SSH key
+          mkdir -p ~/.ssh
+          echo "$DROPLET_SSH_KEY_PRIVATE" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H $DROPLET_HOST >> ~/.ssh/known_hosts
+
+          # Rsync everything (except node_modules & .git)
+          rsync -av --delete \
+            --exclude='.git*' \
+            --exclude='node_modules/' \
+            --exclude='.next/' \
+            . $DROPLET_USER@$DROPLET_HOST:/home/mern/KeepLatinAlive
+
+      - name: Restart dev server on Droplet
+        run: |
+          ssh ${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }} << 'EOF'
+            cd /home/mern/KeepLatinAlive
+
+            # Install deps if missing
+            [ -d node_modules ] || npm ci
+
+            # Kill any old dev process
+            pm2 delete keeping-latin-alive-dev || true
+
+            # Start fresh dev server on port 3000
+            pm2 start npm --name "keeping-latin-alive-dev" -- run dev
+
+            # Optional: save so it survives reboot (remove later when you go prod)
+            pm2 save

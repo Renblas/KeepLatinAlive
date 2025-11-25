@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation';
-import AuthHeader from '../../../components/AuthHeader';
 import Sidebar from '../../../components/Sidebar';
 import Footer from '../../../components/Footer';
 import ScrollSection from '../../../components/ScrollSection';
@@ -8,8 +7,8 @@ import QuizComponent from '../../../components/lesson/QuizComponent';
 import ReferenceComponent from '../../../components/lesson/ReferenceComponent';
 import { getLessonBySlug } from '../../../data/lessons';
 
-export default function LessonPage({ params }: { params: { slug: string } }) {
-  const lesson = getLessonBySlug(params.slug);
+export default async function LessonPage({ params }: { params: { slug: string } }) {
+  const lesson = await getLessonBySlug(params.slug);
 
   if (!lesson) {
     notFound();

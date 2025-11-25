@@ -16,7 +16,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="sticky w-64 top-16 self-start h-fill overflow-y-auto">
+    <aside className="sticky w-auto top-0 self-start h-fill overflow-y-auto overflow-x-none">
       <GlassCard 
                   cornerRadius={12}
                   blurAmount={0.01}
@@ -30,7 +30,7 @@ export default function Sidebar() {
                 >
       
       <div className="p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Lessons</h2>
+        <h2 className="text-2xl font-bold text-amber-50 mb-6">Lessons</h2>
         
         <nav className="space-y-3">
           {lessons.map((lesson) => {
@@ -45,11 +45,11 @@ export default function Sidebar() {
                   <div className="flex items-center">
                     <span className={`
                       w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm font-bold
-                      ${isActive ? 'bg-amber-400 text-red-900' : 'bg-gray-200 text-gray-600'}
+                      ${isActive ? 'bg-amber-400 text-red-900' : 'bg-amber-600 text-amber-100'}
                     `}>
                       {lesson.id}
                     </span>
-                    <span className={`font-medium ${isActive ? 'text-gray-900' : 'text-gray-700'}`}>
+                    <span className={`font-medium ${isActive ? 'text-amber-100' : 'text-amber-100'}`}>
                       {lesson.title}
                     </span>
                   </div>
@@ -61,7 +61,7 @@ export default function Sidebar() {
 
         <div className="mt-8">
           
-            <p className="text-sm text-gray-600 italic">
+            <p className="text-sm text-amber-100 italic">
               "Latin is not dead, it's just taking a long nap."
             </p>
           

@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 import Sidebar from '../../../components/Sidebar';
-import Footer from '../../../components/Footer';
 import ScrollSection from '../../../components/ScrollSection';
 import VideoComponent from '../../../components/lesson/VideoComponent';
 import QuizComponent from '../../../components/lesson/QuizComponent';
@@ -14,13 +13,14 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
   if (!lesson) notFound();
 
   return (
-    <div className="min-h-screen">
       
       <div className="flex">
+
+        <Sidebar />
         
         <main className="flex-1 snap-container">
           <div className="p-12">
-            <h1 className="text-5xl font-bold text-gray-900 mb-16 text-center">
+            <h1 className="text-5xl font-bold text-amber-100 mb-16 text-center">
               {lesson.name}
             </h1>
             
@@ -42,11 +42,11 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
 
             <div className="mt-24 max-w-4xl mx-auto">
               <ScrollSection>
-                <div className="flex justify-between items-center p-8 bg-white rounded-xl border border-gray-200">
-                  <button className="text-gray-600 hover:text-gray-900 font-medium">
+                <div className="flex justify-between items-center p-8 bg-amber-600 rounded-xl">
+                  <button className="text-amber-50 hover:text-red-900 font-medium">
                     ← Previous Lesson
                   </button>
-                  <button className="bg-red-800 text-amber-100 px-8 py-3 rounded-lg font-bold hover:bg-red-900 transition-colors">
+                  <button className="bg-red-800 text-amber-50 px-8 py-3 rounded-lg font-bold hover:bg-red-900 transition-colors">
                     Next Lesson →
                   </button>
                 </div>
@@ -55,7 +55,5 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
           </div>
         </main>
       </div>
-
-    </div>
   );
 }

@@ -17,12 +17,12 @@ export default function VideoComponent({ component }: VideoComponentProps) {
   const videoId = getVideoId(component.youtubeUrl);
 
   return (
-    <GlassCard cornerRadius={24} blurAmount={0.01} className="p-8 border border-gray-200">
+    <div className="p-8">
       {component.title && (
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">{component.title}</h3>
+        <h3 className="text-2xl font-bold text-amber-100 mb-4">{component.title}</h3>
       )}
       {component.description && (
-        <p className="text-gray-700 mb-6">{component.description}</p>
+        <p className="text-amber-50 mb-6">{component.description}</p>
       )}
       <div className="aspect-video w-full rounded-lg overflow-hidden shadow-lg">
         <iframe
@@ -35,6 +35,6 @@ export default function VideoComponent({ component }: VideoComponentProps) {
           className="w-full h-full"
         />
       </div>
-    </GlassCard>
+    </div>
   );
 }

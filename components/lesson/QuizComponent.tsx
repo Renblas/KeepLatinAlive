@@ -44,7 +44,7 @@ export default function QuizComponent({ component }: QuizComponentProps) {
 
   if (completed) {
     return (
-      <GlassCard cornerRadius={24} blurAmount={0.01} className="p-12 text-center border border-gray-200">
+      <div className="p-12 text-center">
         <h3 className="text-3xl font-bold text-gray-900 mb-6">Quiz Complete!</h3>
         <p className="text-2xl text-gray-700 mb-8">
           You scored {score} out of {component.questions.length}
@@ -61,29 +61,29 @@ export default function QuizComponent({ component }: QuizComponentProps) {
         >
           Retake Quiz
         </button>
-      </GlassCard>
+      </div>
     );
   }
 
   return (
-    <GlassCard cornerRadius={24} blurAmount={0.01} className="p-12 border border-gray-200">
+    <div className="p-12">
       <div className="mb-8">
         <div className="flex justify-between items-center mb-6">
-          <h3 className="text-2xl font-bold text-gray-900">Quiz</h3>
-          <span className="text-lg text-gray-600">
+          <h3 className="text-2xl font-bold text-amber-100">Quiz</h3>
+          <span className="text-lg text-amber-50">
             Question {currentQuestion + 1} of {component.questions.length}
           </span>
         </div>
         
         <div className="w-full bg-gray-200 rounded-full h-2 mb-8">
           <div 
-            className="bg-red-800 h-2 rounded-full transition-all duration-300"
+            className="bg-amber-600 h-2 rounded-full transition-all duration-300"
             style={{ width: `${((currentQuestion + 1) / component.questions.length) * 100}%` }}
           />
         </div>
       </div>
 
-      <h4 className="text-xl font-semibold text-gray-900 mb-8">{question.question}</h4>
+      <h4 className="text-xl font-semibold text-amber-50 mb-8">{question.question}</h4>
 
       <div className="space-y-4 mb-8">
         {question.answers.map((answer, index) => (
@@ -95,15 +95,15 @@ export default function QuizComponent({ component }: QuizComponentProps) {
               selectedAnswer === index
                 ? showResult
                   ? index === question.correctAnswerIndex
-                    ? 'border-green-500 bg-green-50'
+                    ? 'border-green-500 bg-amber-500'
                     : 'border-red-500 bg-red-50'
                   : 'border-red-800 bg-red-50'
                 : showResult && index === question.correctAnswerIndex
                 ? 'border-green-500 bg-green-50'
-                : 'border-gray-300 hover:border-gray-400'
+                : 'border-amber-600 hover:border-amber-700'
             }`}
           >
-            <span className="text-lg text-gray-900">{answer}</span>
+            <span className="text-lg text-amber-50">{answer}</span>
           </button>
         ))}
       </div>
@@ -127,19 +127,19 @@ export default function QuizComponent({ component }: QuizComponentProps) {
           <button
             onClick={handleSubmit}
             disabled={selectedAnswer === null}
-            className="bg-red-800 text-amber-100 px-8 py-3 rounded-lg font-bold hover:bg-red-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-amber-600 text-amber-50 px-8 py-3 rounded-lg font-bold hover:bg-red-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Submit Answer
           </button>
         ) : (
           <button
             onClick={handleNext}
-            className="bg-red-800 text-amber-100 px-8 py-3 rounded-lg font-bold hover:bg-red-900 transition-colors"
+            className="bg-amber-600 text-amber-50 px-8 py-3 rounded-lg font-bold hover:bg-red-900 transition-colors"
           >
             {currentQuestion < component.questions.length - 1 ? 'Next Question' : 'Finish Quiz'}
           </button>
         )}
       </div>
-    </GlassCard>
+    </div>
   );
 }

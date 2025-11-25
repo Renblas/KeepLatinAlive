@@ -18,7 +18,7 @@ export default function Home() {
           </p>
           <div className="flex gap-6 justify-center">
             <Link
-              href="/sign-up"
+              href="/lessons"
               className="bg-amber-400 text-red-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-amber-300 transition-all shadow-lg"
             >
               Start Learning
@@ -83,7 +83,7 @@ export default function Home() {
               Join thousands of learners rediscovering the language of ancient Rome
             </p>
             <Link
-              href="/sign-up"
+              href="/lessons"
               className="inline-block bg-amber-400 text-red-950 px-12 py-5 rounded-lg font-bold text-xl hover:bg-amber-300 transition-all shadow-lg"
             >
               Start Your First Lesson

@@ -33,6 +33,14 @@ export default function Footer() {
             <p className="text-sm text-amber-100 opacity-90">
               Join us in keeping Latin alive!
             </p>
+            <div className="flex gap-4 m-2 -ml-2">
+              <a href="www.instagram.com/keeping_latin_alive" className="">
+                <img src="/instagram.png" className="h-10 w-10"></img>
+              </a>
+              <a href="mailto:260196@cghsfl.org" className="">
+                <img src="/email.png" className="h-10 w-10"></img>
+              </a>
+            </div>
           </div>
         </div>
 

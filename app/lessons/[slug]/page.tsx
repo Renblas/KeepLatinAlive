@@ -7,12 +7,11 @@ import QuizComponent from '../../../components/lesson/QuizComponent';
 import ReferenceComponent from '../../../components/lesson/ReferenceComponent';
 import { getLessonBySlug } from '../../../data/lessons';
 
-export default async function LessonPage({ params }: { params: { slug: string } }) {
-  const lesson = await getLessonBySlug(params.slug);
+export default async function LessonPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const lesson = await getLessonBySlug(slug);
 
-  if (!lesson) {
-    notFound();
-  }
+  if (!lesson) notFound();
 
   return (
     <div className="min-h-screen">

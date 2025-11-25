@@ -42,11 +42,11 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
 
             <div className="mt-24 max-w-4xl mx-auto">
               <ScrollSection>
-                <div className="flex justify-between items-center p-8 bg-amber-600 rounded-xl">
+                <div className="flex justify-between items-center p-8 bg-amber-700 rounded-xl">
                   <button className="text-amber-50 hover:text-red-900 font-medium">
                     ← Previous Lesson
                   </button>
-                  <button className="bg-red-800 text-amber-50 px-8 py-3 rounded-lg font-bold hover:bg-red-900 transition-colors">
+                  <button className="bg-red-800 text-amber-50 px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors">
                     Next Lesson →
                   </button>
                 </div>

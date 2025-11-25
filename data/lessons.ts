@@ -8,7 +8,7 @@ export const lessons: Lesson[] = [
     components: [
       {
         type: 'video',
-        youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+        youtubeUrl: 'https://www.youtube.com/watch?v=T_OSrRJuoz0',
         title: 'Welcome to Latin',
         description: 'An introduction to the Latin language and its importance in history.'
       },

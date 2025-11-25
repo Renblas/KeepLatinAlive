@@ -45,8 +45,8 @@ export default function QuizComponent({ component }: QuizComponentProps) {
   if (completed) {
     return (
       <div className="p-12 text-center">
-        <h3 className="text-3xl font-bold text-gray-900 mb-6">Quiz Complete!</h3>
-        <p className="text-2xl text-gray-700 mb-8">
+        <h3 className="text-3xl font-bold text-amber-100 mb-6">Quiz Complete!</h3>
+        <p className="text-2xl text-amber-50 mb-8">
           You scored {score} out of {component.questions.length}
         </p>
         <button
@@ -57,7 +57,7 @@ export default function QuizComponent({ component }: QuizComponentProps) {
             setScore(0);
             setCompleted(false);
           }}
-          className="bg-red-800 text-amber-100 px-8 py-3 rounded-lg font-bold hover:bg-red-900 transition-colors"
+          className="bg-amber-700 text-amber-100 px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors"
         >
           Retake Quiz
         </button>
@@ -95,11 +95,11 @@ export default function QuizComponent({ component }: QuizComponentProps) {
               selectedAnswer === index
                 ? showResult
                   ? index === question.correctAnswerIndex
-                    ? 'border-green-500 bg-amber-500'
-                    : 'border-red-500 bg-red-50'
-                  : 'border-red-800 bg-red-50'
+                    ? 'border-green-500 bg-green-700'
+                    : 'border-red-500 bg-red-700'
+                  : 'border-amber-600 bg-amber-700'
                 : showResult && index === question.correctAnswerIndex
-                ? 'border-green-500 bg-green-50'
+                ? 'border-green-500 bg-green-700'
                 : 'border-amber-600 hover:border-amber-700'
             }`}
           >
@@ -111,10 +111,10 @@ export default function QuizComponent({ component }: QuizComponentProps) {
       {showResult && (
         <div className={`p-6 rounded-lg mb-6 ${
           selectedAnswer === question.correctAnswerIndex
-            ? 'bg-green-50 border-2 border-green-500'
-            : 'bg-red-50 border-2 border-red-500'
+            ? 'border-2 border-green-500 bg-green-700'
+            : 'border-2 border-red-500 bg-red-700'
         }`}>
-          <p className="text-lg font-semibold">
+          <p className="text-lg font-semibold text-amber-50">
             {selectedAnswer === question.correctAnswerIndex
               ? '✓ Correct!'
               : '✗ Incorrect'}
@@ -127,14 +127,14 @@ export default function QuizComponent({ component }: QuizComponentProps) {
           <button
             onClick={handleSubmit}
             disabled={selectedAnswer === null}
-            className="bg-amber-600 text-amber-50 px-8 py-3 rounded-lg font-bold hover:bg-red-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-amber-600 text-amber-50 px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Submit Answer
           </button>
         ) : (
           <button
             onClick={handleNext}
-            className="bg-amber-600 text-amber-50 px-8 py-3 rounded-lg font-bold hover:bg-red-900 transition-colors"
+            className="bg-amber-600 text-amber-50 px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors"
           >
             {currentQuestion < component.questions.length - 1 ? 'Next Question' : 'Finish Quiz'}
           </button>

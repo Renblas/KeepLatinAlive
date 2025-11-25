@@ -16,13 +16,9 @@ export default function LessonPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <AuthHeader />
-      
-      <div className="pt-16"></div>
+    <div className="min-h-screen">
       
       <div className="flex">
-        <Sidebar />
         
         <main className="flex-1 snap-container">
           <div className="p-12">
@@ -62,7 +58,6 @@ export default function LessonPage({ params }: { params: { slug: string } }) {
         </main>
       </div>
 
-      <Footer />
     </div>
   );
 }

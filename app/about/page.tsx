@@ -1,18 +1,11 @@
 "use client"
 
 import { GlassCard } from '@developer-hub/liquid-glass';
-import PublicHeader from "../../components/PublicHeader";
-import Footer from "../../components/Footer";
 import ScrollSection from "../../components/ScrollSection";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-950 via-red-900 to-red-800">
-      <PublicHeader />
-      
-      <div className="pt-16"></div>
-      
-      <main className="snap-container">
+    <>
         <ScrollSection className="min-h-screen flex items-center justify-center px-6 py-24">
           <div className="max-w-4xl mx-auto w-full">
             <GlassCard cornerRadius={24} blurAmount={0.01} className="p-16 border border-white/20">
@@ -47,9 +40,6 @@ export default function About() {
             </GlassCard>
           </div>
         </ScrollSection>
-      </main>
-
-      <Footer />
-    </div>
+      </>
   );
 }

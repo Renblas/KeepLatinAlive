@@ -2,9 +2,7 @@
 
 import Link from "next/link";
 import { GlassCard } from '@developer-hub/liquid-glass';
-import AuthHeader from "../../components/AuthHeader";
 import Sidebar from "../../components/Sidebar";
-import Footer from "../../components/Footer";
 
 export default function LessonsPage() {
   // In a real app, fetch user progress from database
@@ -12,12 +10,8 @@ export default function LessonsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <AuthHeader />
-      
-      <div className="pt-16"></div>
       
       <div className="flex">
-        <Sidebar />
         
         <main className="flex-1 p-12">
           <div className="max-w-4xl mx-auto space-y-12">
@@ -53,8 +47,6 @@ export default function LessonsPage() {
           </div>
         </main>
       </div>
-
-      <Footer />
     </div>
   );
 }

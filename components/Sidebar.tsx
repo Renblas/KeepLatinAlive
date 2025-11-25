@@ -16,7 +16,19 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 flex-shrink-0 sticky top-16 self-start h-[calc(100vh-4rem)] overflow-y-auto">
+    <aside className="sticky w-64 top-16 self-start h-fill overflow-y-auto">
+      <GlassCard 
+                  cornerRadius={12}
+                  blurAmount={0.01}
+                  className={`p-4 transition-all`}
+
+                  /*${
+                    isActive 
+                      ? 'ring-2 ring-amber-400' 
+                      : 'hover:ring-1 hover:ring-gray-300'
+                  }*/
+                >
+      
       <div className="p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Lessons</h2>
         
@@ -29,15 +41,7 @@ export default function Sidebar() {
                 href={`/lessons/${lesson.slug}`}
                 className="block"
               >
-                <GlassCard 
-                  cornerRadius={12}
-                  blurAmount={0.01}
-                  className={`p-4 transition-all ${
-                    isActive 
-                      ? 'ring-2 ring-amber-400' 
-                      : 'hover:ring-1 hover:ring-gray-300'
-                  }`}
-                >
+                
                   <div className="flex items-center">
                     <span className={`
                       w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm font-bold
@@ -49,20 +53,21 @@ export default function Sidebar() {
                       {lesson.title}
                     </span>
                   </div>
-                </GlassCard>
+                
               </Link>
             );
           })}
         </nav>
 
         <div className="mt-8">
-          <GlassCard cornerRadius={12} blurAmount={0.01} className="p-4">
+          
             <p className="text-sm text-gray-600 italic">
               "Latin is not dead, it's just taking a long nap."
             </p>
-          </GlassCard>
+          
         </div>
       </div>
+      </GlassCard>
     </aside>
   );
 }

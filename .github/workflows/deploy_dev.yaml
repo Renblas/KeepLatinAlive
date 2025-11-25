@@ -17,14 +17,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build Next.js app
-        run: npm run build
-        # No env vars needed for dev → Clerk will just show "Sign In" button that does nothing
-
+          
       - name: Deploy to Droplet via SSH
         env:
           DROPLET_SSH_KEY_PRIVATE: ${{ secrets.DROPLET_SSH_KEY_PRIVATE }}

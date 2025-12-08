@@ -1,6 +1,5 @@
 "use client"
 
-import { GlassCard } from '@developer-hub/liquid-glass';
 import ScrollSection from "../../components/ScrollSection";
 
 export default function About() {

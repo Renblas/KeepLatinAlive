@@ -26,6 +26,11 @@ export default function ScrollSection({ children, className = '' }: ScrollSectio
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
+
+      // Force check immediately in case it's already visible
+      if (sectionRef.current.getBoundingClientRect().top < window.innerHeight * 0.8) {
+        setIsVisible(true);
+      }
     }
 
     return () => {

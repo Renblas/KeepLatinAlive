@@ -25,6 +25,11 @@ export default function Footer() {
                   Resources
                 </Link>
               </li>
+              <li>
+                <Link href="/privacy" className="hover:text-amber-300 transition-colors">
+                  Privacy
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -1,91 +1,124 @@
 "use client"
 
-import { GlassCard } from '@developer-hub/liquid-glass';
 import ScrollSection from "../../components/ScrollSection";
 
-export default function About() {
-	return (
-	<>
+export default function Privacy() {
+  return (
+    <>
+      <ScrollSection className="min-h-screen flex items-center justify-center px-6 py-24">
+        <div className="max-w-4xl mx-auto px-6 py-16 text-amber-50 w-full">
+          {/* Title */}
+          <h1 className="text-4xl md:text-5xl font-bold text-amber-100 text-center mb-4">
+            Privacy Policy for Keep Latin Alive
+          </h1>
 
- <ScrollSection className="min-h-screen flex items-center justify-center px-6 py-24">
-          <div className="max-w-4xl mx-auto w-full">
-<div className="max-w-4xl mx-auto px-6 py-12 prose prose-lg">
-  <h1>Privacy Policy for Keep Latin Alive</h1>
-  <p className="text-sm text-gray-500">
-    Effective date: <time dateTime="2025-12-08">December 8, 2025</time><br />
-    Last updated: <time dateTime="2025-12-08">December 8, 2025</time>
-  </p>
+          <p className="text-center text-amber-200/70 text-sm mb-12">
+            Effective date: <time dateTime="2025-12-08" className="font-medium">December 8, 2025</time>
+            {" "}|{" "}
+            Last updated: <time dateTime="2025-12-08" className="font-medium">December 8, 2025</time>
+          </p>
 
-  <p>
-    Keep Latin Alive (“we,” “our,” or “us”) operates the website <a href="https://keeplatinalive.com">https://keeplatinalive.com</a> (the “Service”), an educational platform offering free introductory Latin lessons and prayers.
-  </p>
+          {/* Intro */}
+          <div className="text-amber-50 leading-relaxed space-y-6 mb-12 text-lg">
+            <p>
+              Keep Latin Alive (“we,” “our,” or “us”) operates the website{' '}
+              <a href="https://keeplatinalive.com" className="underline underline-offset-4 hover:text-amber-200 transition">
+                https://keeplatinalive.com
+              </a>{' '}
+              (the “Service”), an educational platform offering free introductory Latin lessons and prayers.
+            </p>
+            <p>
+              This Privacy Policy explains how we collect, use, and protect your personal information when you use our Service.
+            </p>
+          </div>
 
-  <p>This Privacy Policy explains how we collect, use, and protect your personal information when you use our Service.</p>
+          {/* Sections */}
+          <div className="space-y-16 text-amber-50">
 
-  <h2>1. Information We Collect</h2>
-  <p>When you sign up or log in using “Sign in with Google”:</p>
-  <ul>
-    <li>We receive only your <strong>name</strong> and <strong>email address</strong> from Google.</li>
-    <li>We do <strong>not</strong> request or receive any other information from your Google account (no profile picture, contacts, Gmail access, etc.).</li>
-  </ul>
+            {/* 1. Information We Collect */}
+            <section>
+              <h2 className="text-3xl font-bold text-amber-100 mb-6">1. Information We Collect</h2>
+              <p className="mb-4">When you sign up or log in using “Sign in with Google”:</p>
+              <ul className="space-y-3 ml-8 mb-6">
+                <li className="relative before:absolute before:-left-6 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-amber-400">
+                  We receive only your <strong>name</strong> and <strong>email address</strong> from Google.
+                </li>
+                <li className="relative before:absolute before:-left-6 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-amber-400">
+                  We do <strong>not</strong> request or receive any other information from your Google account (no profile picture, contacts, Gmail access, etc.).
+                </li>
+              </ul>
+              <p className="italic">
+                All authentication is handled securely by <strong>Clerk</strong>{' '}
+                (<a href="https://clerk.com" className="underline underline-offset-4 hover:text-amber-200">clerk.com</a>).
+              </p>
+              <p className="mt-4">We do <strong>not</strong> collect:</p>
+              <ul className="space-y-2 ml-8 mt-3">
+                <li>• Payment information</li>
+                <li>• Location data</li>
+                <li>• IP addresses (beyond standard web server logs)</li>
+                <li>• Any usage analytics or tracking cookies</li>
+              </ul>
+            </section>
 
-  <p>All authentication (creating accounts, sessions, password management, etc.) is handled securely by <strong>Clerk</strong> (<a href="https://clerk.com">https://clerk.com</a>), our third-party authentication provider.</p>
+            {/* 2–8. Repeat pattern */}
+            <section>
+              <h2 className="text-3xl font-bold text-amber-100 mb-6">2. How We Use Your Information</h2>
+              <p className="mb-4">The only purposes for which we use your name and email are:</p>
+              <ul className="space-y-3 ml-8">
+                <li className="relative before:absolute before:-left-6 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-amber-400">To create and manage your account</li>
+                <li className="relative before:absolute before:-left-6 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-amber-400">To let you log in</li>
+                <li className="relative before:absolute before:-left-6 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-amber-400">To display your name in the app (e.g., “Welcome, Marcus”)</li>
+                <li className="relative before:absolute before:-left-6 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-amber-400">To contact you only if needed (service updates) — no marketing, ever</li>
+              </ul>
+            </section>
 
-  <p>We do <strong>not</strong> collect:</p>
-  <ul>
-    <li>Payment information</li>
-    <li>Location data</li>
-    <li>IP addresses (beyond standard web server logs)</li>
-    <li>Any usage analytics or tracking cookies</li>
-  </ul>
+            <section>
+              <h2 className="text-3xl font-bold text-amber-100 mb-6">3. Data Storage and Security</h2>
+              <p>
+                Your name and email are stored securely by Clerk and in our database only as needed. We use industry-standard encryption (TLS, hashed passwords by Clerk, etc.).
+              </p>
+            </section>
 
-  <h2>2. How We Use Your Information</h2>
-  <p>The only purposes for which we use your name and email are:</p>
-  <ul>
-    <li>To create and manage your account</li>
-    <li>To let you log in</li>
-    <li>To display your name in the app (e.g., “Welcome, Marcus”)</li>
-    <li>To contact you if we ever need to (e.g., important service updates) — we have never sent marketing emails and do not plan to.</li>
-  </ul>
+            <section>
+              <h2 className="text-3xl font-bold text-amber-100 mb-6">4. Sharing Your Information</h2>
+              <p>We do <strong>not</strong> sell, trade, or share your data except:</p>
+              <ul className="space-y-3 ml-8 mt-4">
+                <li className="relative before:absolute before:-left-6 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-amber-400">
+                  Clerk (our auth provider) — see their policy:{' '}
+                  <a href="https://clerk.com/privacy" className="underline underline-offset-4 hover:text-amber-200">clerk.com/privacy</a>
+                </li>
+                <li className="relative before:absolute before:-left-6 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-amber-400">As required by law</li>
+              </ul>
+            </section>
 
-  <h2>3. Data Storage and Security</h2>
-  <p>Your name and email are stored securely by Clerk and in our database only as needed to operate your account. We use industry-standard encryption and security practices (TLS, hashed passwords handled by Clerk, etc.).</p>
+            <section>
+              <h2 className="text-3xl font-bold text-amber-100 mb-6">5. Data Retention</h2>
+              <p>We keep your data only while your account exists. Delete your account → all data permanently removed within 30 days.</p>
+            </section>
 
-  <h2>4. Sharing Your Information</h2>
-  <p>We do <strong>not</strong> sell, trade, or share your personal information with anyone except:</p>
-  <ul>
-    <li>Clerk (our authentication provider) — see their privacy policy: <a href="https://clerk.com/privacy">https://clerk.com/privacy</a></li>
-    <li>As required by law (e.g., court order)</li>
-  </ul>
+            <section>
+              <h2 className="text-3xl font-bold text-amber-100 mb-6">6. Your Rights</h2>
+              <ul className="space-y-3 ml-8">
+                <li className="relative before:absolute before:-left-6 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-amber-400">Access or delete your account anytime in settings</li>
+                <li className="relative before:absolute before:-left-6 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-amber-400">Contact us for any data request</li>
+              </ul>
+            </section>
 
-  <h2>5. Data Retention</h2>
-  <p>We keep your account information for as long as you have an active account. If you delete your account, all personal data is permanently removed within 30 days.</p>
+            <section>
+              <h2 className="text-3xl font-bold text-amber-100 mb-6">8. Changes to This Policy</h2>
+              <p>We will post any material changes here and update the “Last updated” date.</p>
+            </section>
 
-  <h2>6. Your Rights</h2>
-  <p>You can:</p>
-  <ul>
-    <li>Access or delete your account at any time in the app settings</li>
-    <li>Contact us at any time to request deletion or to ask questions</li>
-  </ul>
+          </div>
 
-  <h2>7. Children’s Privacy</h2>
-  <p>Our Service is not intended for children under 13. We do not knowingly collect data from children under 13.</p>
-
-  <h2>8. Changes to This Policy</h2>
-  <p>We may update this policy occasionally. We will notify you of any material changes by posting the new policy here and updating the “Last updated” date.</p>
-
-  <h2>9. Contact Us</h2>
-  <p>If you have any questions about this Privacy Policy, please contact us at:<br />
-    <a href="mailto:contact@keeplatinalive.com">contact@keeplatinalive.com</a>
-  </p>
-
-  <hr className="my-12" />
-
-  <p className="italic">Thank you for helping keep Latin alive! 🏛️</p>
-</div>
-
-</div>
-</ScrollSection>		
-	</>
-			);
+          {/* Divider + Closing */}
+          <div className="mt-20 pt-12 border-t-2 border-amber-800/50">
+            <p className="text-center text-2xl italic font-medium text-amber-200">
+              Thank you for helping keep Latin alive!
+            </p>
+          </div>
+        </div>
+      </ScrollSection>
+    </>
+  );
 }

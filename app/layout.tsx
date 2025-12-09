@@ -12,7 +12,10 @@ export const metadata: Metadata = {
   description: "Learn the basics of Latin with modern, interactive lessons",
   icons: {
     icon: "/favicon-32x32.png"
-  }
+  },
+  other: {
+	"google-site-verification": "PDPjE-smVmj0Xkeqi2WKaOVI2QREwRg1kdsqBELXT6Y"
+	}
 };
 
 export default function RootLayout({

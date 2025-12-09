@@ -6,8 +6,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['img.youtube.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+        // Optional: you can further restrict the pathname if needed
+        // pathname: '/vi/**', 
+      },
+    ],
   },
-}
-
+};
 module.exports = nextConfig

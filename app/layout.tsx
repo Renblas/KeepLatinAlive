@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ClerkProvider, SignedIn, SignedOut } from "@clerk/nextjs";
+import { ClerkProvider} from "@clerk/nextjs";
 import "./globals.css";
-import Link from "next/link";
-import { GlassCard } from '@developer-hub/liquid-glass';
 import Footer from "../components/Footer";
-import ScrollSection from "../components/ScrollSection";
 import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 

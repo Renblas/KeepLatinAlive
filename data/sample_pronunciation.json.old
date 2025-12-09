@@ -1,0 +1,33 @@
+{
+    "id": 2,
+    "name": "Pronunciation Guide",
+    "slug": "pronunciation",
+    "components": [
+      {
+        "type": "reference",
+        "title": "Latin Pronunciation",
+        "content": "# Latin Pronunciation Guide
+
+Learning proper Latin pronunciation is essential for speaking and understanding the language.
+
+## Vowels
+
+| Letter | Sound | Example |
+|--------|-------|---------|
+| A | \"ah\" as in \"father\" | **a**mor (love) |
+| E | \"eh\" as in \"pet\" | **e**st (is) |
+| I | \"ee\" as in \"machine\" | **i**ta (thus) |
+| O | \"oh\" as in \"hope\" | **o**pto (I choose) |
+| U | \"oo\" as in \"rude\" | **u**t (so that) |
+
+## Practice Words
+
+Try pronouncing these common Latin words:
+
+- **salve** (hello) - SAHL-weh
+- **vale** (goodbye) - WAH-leh
+- **amo** (I love) - AH-moh
+- **pax** (peace) - pahks"
+      }
+    ]
+  }

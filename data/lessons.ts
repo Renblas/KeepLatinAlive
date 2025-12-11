@@ -1,45 +1,39 @@
-import fs from 'fs';
-import path from 'path';
-
 import type { Lesson } from '../types/lesson';
 
-export var lessons: Lesson[];
-
-const jsonFiles: string[] = [];
-const directoryPath = "./"
-
-try {
-  const filesAndDirectories = fs.readdirSync(directoryPath);
-
-  for (const item of filesAndDirectories) {
-    const absolutePath = path.join(directoryPath, item);
-    const stats = fs.statSync(absolutePath);
-
-    if (stats.isFile() && path.extname(item) === '.json') {
-      jsonFiles.push(absolutePath);
-    } else if (stats.isDirectory()) {
-      // Optionally, recursively search subdirectories
-      // jsonFiles.push(...getAllJsonFiles(absolutePath));
-    }
+export const lessons: Lesson[] = [
+  {
+    "id": 0,
+    "slug": "outline",
+    "name": "Course Outline",
+    "components": [
+      {
+        "type": "video",
+        "youtubeUrl": "https://youtu.be/Bora_I2oowA?si=pkFjDFuOoHIJGJEH",
+        "title": "Course Outline",
+        "description": "An outline for the adventure ahead"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "slug": "lesson-1",
+    "name": "Lesson 1",
+    "components": [
+      {
+        "type": "video",
+        "youtubeUrl": "https://youtu.be/-kFvc_ZX8-Q?si=nuT1euk2dRBKL-Hm",
+        "title": "Lesson 1 Grammer",
+        "description": "video description"
+      },
+      {
+        "type": "video",
+        "youtubeUrl": "https://youtu.be/5XI6MOmiWfE?si=XRiCs-CauYlQ4LQ6",
+        "title": "Lesson 1 Culture",
+        "description": "video description"
+      }
+    ]
   }
-} catch (error) {
-  console.error(`Error reading directory ${directoryPath}:`, error);
-}
-
-for (const lesson of jsonFiles) {
-  fs.readFile(lesson, 'utf8', (err, jsonString) => {
-    if (err) {
-      console.error('Error reading file:', err);
-      return;
-    }
-    try {
-      const data = JSON.parse(jsonString);
-      lessons.push(data);
-    } catch (parseError) {
-      console.error('Error parsing JSON:', parseError);
-    }
-  });
-}
+];
 
 export function getLessonBySlug(slug: string): Lesson | undefined {
   return lessons.find(lesson => lesson.slug === slug);

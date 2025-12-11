@@ -1,16 +1,9 @@
-'use client';
+"use client"
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GlassCard } from '@developer-hub/liquid-glass';
-
-const lessons = [
-  { id: 1, title: "Introduction to Latin", slug: "intro" },
-  { id: 2, title: "Pronunciation Guide", slug: "pronunciation" },
-  { id: 3, title: "First Declension Nouns", slug: "first-declension" },
-  { id: 4, title: "Second Declension Nouns", slug: "second-declension" },
-  { id: 5, title: "Basic Verbs", slug: "basic-verbs" },
-];
+import { lessons } from '../data/lessons';
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -50,7 +43,7 @@ export default function Sidebar() {
                       {lesson.id}
                     </span>
                     <span className={`font-medium ${isActive ? 'text-amber-100' : 'text-amber-100'}`}>
-                      {lesson.title}
+                      {lesson.name}
                     </span>
                   </div>
                 

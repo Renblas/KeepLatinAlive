@@ -1,3 +1,5 @@
+"use client"
+
 import { notFound } from 'next/navigation';
 import Sidebar from '../../../components/Sidebar';
 import ScrollSection from '../../../components/ScrollSection';

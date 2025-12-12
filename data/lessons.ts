@@ -29,7 +29,7 @@ export const lessons: Lesson[] = [
             "answers": [
               { "string": "a. I was speaking to the friend.", "correct": false },
               { "string": "b. We spoke to the dog.", "correct": false },
-              { "string": "c. I am speaking to the friend.", "correct": false },
+              { "string": "c. I am speaking to the friend.", "correct": true },
               { "string": "d. The boy is speaking to me.", "correct": false }
             ]
           },

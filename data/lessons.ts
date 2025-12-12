@@ -82,9 +82,9 @@ export const lessons: Lesson[] = [
             "question": "8. Callidor",
             "answers": [
               { "string": "a. strong", "correct": false },
-              { "string": "b. Smarter", "correct": false },
+              { "string": "b. Smarter", "correct": true },
               { "string": "c. Smartest", "correct": false },
-              { "string": "d. Better", "correct": true }
+              { "string": "d. Better", "correct": false }
             ]
           },
           {
@@ -100,9 +100,9 @@ export const lessons: Lesson[] = [
             "question": "10. What declension and number is magistras",
             "answers": [
               { "string": "a. 3rd singular", "correct": false },
-              { "string": "b. 1st plural", "correct": false },
+              { "string": "b. 1st plural", "correct": true },
               { "string": "c. 2nd singular", "correct": false },
-              { "string": "d. 3rd plural", "correct": true }
+              { "string": "d. 3rd plural", "correct": false }
             ]
           },
           {

@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { GlassCard } from '@developer-hub/liquid-glass';
 import type { QuizComponent as QuizComponentType } from '../../types/lesson';
 
 interface QuizComponentProps {
@@ -27,7 +26,7 @@ export default function QuizComponent({ component }: QuizComponentProps) {
     if (selectedAnswer === null) return;
     
     setShowResult(true);
-    if (selectedAnswer === question.correctAnswerIndex) {
+    if (question.answers[selectedAnswer].correct === true) {
       setScore(score + 1);
     }
   };
@@ -94,28 +93,28 @@ export default function QuizComponent({ component }: QuizComponentProps) {
             className={`w-full p-6 rounded-lg border-2 text-left transition-all ${
               selectedAnswer === index
                 ? showResult
-                  ? index === question.correctAnswerIndex
+                  ? question.answers[index].correct
                     ? 'border-green-500 bg-green-700'
                     : 'border-red-500 bg-red-700'
                   : 'border-amber-600 bg-amber-700'
-                : showResult && index === question.correctAnswerIndex
+                : showResult && question.answers[index].correct
                 ? 'border-green-500 bg-green-700'
                 : 'border-amber-600 hover:border-amber-700'
             }`}
           >
-            <span className="text-lg text-amber-50">{answer}</span>
+            <span className="text-lg text-amber-50">{answer.string}</span>
           </button>
         ))}
       </div>
 
       {showResult && (
         <div className={`p-6 rounded-lg mb-6 ${
-          selectedAnswer === question.correctAnswerIndex
+          question.answers[selectedAnswer].correct
             ? 'border-2 border-green-500 bg-green-700'
             : 'border-2 border-red-500 bg-red-700'
         }`}>
           <p className="text-lg font-semibold text-amber-50">
-            {selectedAnswer === question.correctAnswerIndex
+            {question.answers[selectedAnswer].correct
               ? '✓ Correct!'
               : '✗ Incorrect'}
           </p>

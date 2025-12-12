@@ -5,10 +5,14 @@ export interface VideoComponent {
   description?: string;
 }
 
+export interface Answers {
+  string: string;
+  correct: boolean;
+}
+
 export interface QuizQuestion {
   question: string;
-  answers: string[];
-  correctAnswerIndex: number;
+  answers: Answers[];
 }
 
 export interface QuizComponent {

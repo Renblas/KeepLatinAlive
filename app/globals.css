@@ -108,6 +108,7 @@ html::-webkit-scrollbar {
 
 .markdown-content ul,
 .markdown-content ol {
+  list-style: decimal;
   margin-left: 2rem;
   margin-bottom: 1rem;
 }

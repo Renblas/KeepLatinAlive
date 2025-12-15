@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GlassCard } from '@developer-hub/liquid-glass';
-import { lessons } from '../data/lessons';
+import { lessons } from "../app/lib/lessons";
 
 export default function Sidebar() {
   const pathname = usePathname();

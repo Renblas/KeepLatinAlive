@@ -1,0 +1,24 @@
+{
+    "id": 2,
+    "slug": "lesson-2",
+    "name": "Lesson 2",
+    "components": [
+        {
+            "type": "video",
+            "youtubeUrl": "https://youtu.be/tXpuiYvX6JA?si=tQamB3eJA3QKoFJI",
+            "title": "Lesson 2 Grammer",
+            "description": ""
+        },
+        {
+            "type": "video",
+            "youtubeUrl": "https://youtu.be/Jyz8WypmpJ8?si=zc5OAi43Hk0vxpvg",
+            "title": "Lesson 2 Culture",
+            "description": ""
+        },
+        {
+            "type": "reference",
+            "content": "/md/lesson-2-homework.md"
+        }
+    ]
+}
+

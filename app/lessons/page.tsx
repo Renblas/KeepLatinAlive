@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import Sidebar from "../../components/Sidebar";
+import { lessons } from "../lib/lessons";
 
 export default function LessonsPage() {
   // In a real app, fetch user progress from database
-  const nextLesson = { slug: "intro", title: "Introduction to Latin" };
+  const nextLesson = { slug: "outline", title: "Introduction to Latin" };
 
   return (
       <div className="flex">
@@ -32,7 +33,7 @@ export default function LessonsPage() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-6 bg-amber-600 rounded-lg">
                   <span className="text-lg font-medium text-amber-50">Lessons Completed</span>
-                  <span className="text-2xl font-bold text-red-800">0 / 5</span>
+                  <span className="text-2xl font-bold text-red-800">0 / {lessons.length}</span>
                 </div>
                 <div className="flex items-center justify-between p-6 bg-amber-600 rounded-lg">
                   <span className="text-lg font-medium text-amber-50">Quiz Average</span>

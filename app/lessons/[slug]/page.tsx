@@ -1,4 +1,3 @@
-"use client"
 
 import { notFound } from 'next/navigation';
 import Sidebar from '../../../components/Sidebar';
@@ -6,13 +5,17 @@ import ScrollSection from '../../../components/ScrollSection';
 import VideoComponent from '../../../components/lesson/VideoComponent';
 import QuizComponent from '../../../components/lesson/QuizComponent';
 import ReferenceComponent from '../../../components/lesson/ReferenceComponent';
-import { getLessonBySlug } from '../../../data/lessons';
+import { getLessonBySlug, getLessonById } from '../../lib/lessons';
+import Link from 'next/link';
 
 export default async function LessonPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const lesson = await getLessonBySlug(slug);
 
   if (!lesson) notFound();
+
+  let previousLesson = getLessonById(lesson.id - 1);
+  let nextLesson = getLessonById(lesson.id + 1);
 
   return (
       
@@ -45,12 +48,12 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
             <div className="mt-24 max-w-4xl mx-auto">
               <ScrollSection>
                 <div className="flex justify-between items-center p-8 bg-amber-700 rounded-xl">
-                  <button className="text-amber-50 hover:text-red-900 font-medium">
+                  {previousLesson ? (<Link href={`/lessons/${previousLesson.slug}`} className="text-amber-50 hover:text-red-900 font-medium">
                     ← Previous Lesson
-                  </button>
-                  <button className="bg-red-800 text-amber-50 px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors">
+                  </Link>) : (<div />)}
+                  {nextLesson ? (<Link href={`/lessons/${nextLesson.slug}`} className="bg-red-800 text-amber-50 px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors">
                     Next Lesson →
-                  </button>
+                  </Link>) : (<div />)}
                 </div>
               </ScrollSection>
             </div>

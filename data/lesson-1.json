@@ -7,13 +7,18 @@
             "type": "video",
             "youtubeUrl": "https://youtu.be/-kFvc_ZX8-Q?si=nuT1euk2dRBKL-Hm",
             "title": "Lesson 1 Grammer",
-            "description": "video description"
+            "description": ""
         },
         {
             "type": "video",
             "youtubeUrl": "https://youtu.be/5XI6MOmiWfE?si=XRiCs-CauYlQ4LQ6",
             "title": "Lesson 1 Culture",
-            "description": "video description"
+            "description": ""
+        },
+        {
+            "type": "reference",
+            "content": "/md/lesson-1-homework.md"
         }
     ]
 }
+

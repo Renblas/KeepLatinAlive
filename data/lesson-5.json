@@ -1,0 +1,22 @@
+{
+    "id": 5,
+    "slug": "lesson-5",
+    "name": "Compound Verbs",
+    "components": [
+        {
+            "type": "video",
+            "youtubeUrl": "https://youtu.be/TP-d6ldZADw?si=x_jCKWMOMKwhFSTh",
+            "title": "Lesson 5 Grammer",
+            "description": ""
+        },
+        {
+            "type": "video",
+            "youtubeUrl": "https://youtu.be/vJfzHfj4P4A?si=dCeVdnSYeo7ye8gk",
+            "description": ""
+        },
+        {
+            "type": "reference",
+            "content": "/md/lesson-5-homework.md"
+        }
+    ]
+}

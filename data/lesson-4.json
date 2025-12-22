@@ -1,0 +1,23 @@
+{
+    "id": 4,
+    "slug": "lesson-4",
+    "name": "Accusative Case",
+    "components": [
+        {
+            "type": "video",
+            "youtubeUrl": "https://youtu.be/dT3GYF87nek?si=y4TK8oMwjblXqSLB",
+            "title": "Lesson 4 Grammer",
+            "description": ""
+        },
+        {
+            "type": "video",
+            "youtubeUrl": "https://youtu.be/4RiybYx_fWo?si=7V5Fo6BnShQUdeqJ",
+            "title": "Lesson 4 Culture",
+            "description": ""
+        },
+        {
+            "type": "reference",
+            "content": "/md/lesson-4-homework.md"
+        }
+    ]
+}

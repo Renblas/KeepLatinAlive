@@ -1,0 +1,23 @@
+{
+    "id": 7,
+    "slug": "lesson-7",
+    "name": "Imperfect Tense",
+    "components": [
+        {
+            "type": "video",
+            "youtubeUrl": "https://youtu.be/a0me_N-5fo8?si=rEclV_bwZf_m5nrT",
+            "title": "Lesson 7 Grammer",
+            "description": ""
+        },
+        {
+            "type": "video",
+            "youtubeUrl": "https://youtu.be/wDchsz8nmbo?si=gitav6gh5heczLXN",
+            "title": "Lesson 7 Culture",
+            "description": ""
+        },
+        {
+            "type": "reference",
+            "content": "/md/lesson-7-homework.md"
+        }
+    ]
+}

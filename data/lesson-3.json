@@ -1,13 +1,23 @@
 {
     "id": 3,
     "slug": "lesson-3",
-    "name": "Lesson 3",
+    "name": "Prepositions and Adjectives",
     "components": [
         {
             "type": "video",
             "youtubeUrl": "https://youtu.be/5yiMCBggJZ0?si=id2tRU0y5EKQmKxe",
             "title": "Lesson 3 Grammer",
             "description": ""
+        },
+        {
+            "type": "video",
+            "youtubeUrl": "https://youtu.be/Uev2fAWSQuA?si=AGNBXMBE-qwP1CoD",
+            "title": "Lesson 3 Culture",
+            "description": ""
+        },
+        {
+            "type": "reference",
+            "content": "/md/lesson-3-homework.md"
         }
     ]
 }

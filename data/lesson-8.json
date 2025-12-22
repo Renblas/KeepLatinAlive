@@ -1,0 +1,13 @@
+{
+    "id": 8,
+    "slug": "lesson-8",
+    "name": "Review",
+    "components": [
+        {
+            "type": "video",
+            "youtubeUrl": "https://youtu.be/wDchsz8nmbo?si=gitav6gh5heczLXN",
+            "title": "Review of the Course",
+            "description": ""
+        }
+    ]
+}

@@ -1,6 +1,8 @@
-# Lesson 1 Homework
+### Lesson 1 Homework
 
-## Part A: Name the pronoun and number of the verb
+#### Worksheet
+
+**Part A: Name the pronoun and number of the verb**
 
 Ex: Dicto – Ego (I) singular first person
 
@@ -13,7 +15,7 @@ Ex: Dicto – Ego (I) singular first person
 7. Venimus
 8. Ducent
 
-## Part B: List the English word of the Latin root
+**Part B: List the English word of the Latin root**
 
 1. Audit
 2. Bene
@@ -26,7 +28,7 @@ Ex: Dicto – Ego (I) singular first person
 9. Villa
 10. Dominus
 
-## Part C: Match the verb to its meaning
+**Part C: Match the verb to its meaning**
 
 | Verb   | Meaning          |
 |--------|------------------|
@@ -40,9 +42,9 @@ Ex: Dicto – Ego (I) singular first person
 | dūcō   | 8. to lead      |
 
 
-# Lesson 1 Homework Answers
+#### Lesson 1 Homework Answers
 
-## Part A
+**Part A**
 
 1. 3rd person singular, He, she it
 2. 2nd person plural, You (plural)
@@ -53,7 +55,7 @@ Ex: Dicto – Ego (I) singular first person
 7. 1st person plural, Nos (we)
 8. 3rd person plural, vos (they)
 
-## Part B
+**Part B**
 
 1. Auditory, to hear
 2. Beneficial, good
@@ -66,7 +68,7 @@ Ex: Dicto – Ego (I) singular first person
 9. Villas, house
 10. Dominate, master
 
-## Part C
+**Part C**
 
 1. 3
 2. 2
